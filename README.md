@@ -1,6 +1,12 @@
 # CS5003 Practical3: Social Runner using Google Maps API
 This repository implements a simple application enabling runners to generate, join and view routes.<br>
 
+Features included:
+* UI: A client-side user interface for user interaction
+* RESTful API: A RESTful API written in Node.js/Express for exchanging data between client and the server
+* Database: Database backend for persistent storage of data about activities and possible users
+* External API: Use of an external API for mapping and distance calculation (e.g. Google Maps)
+
 ![Alt text](screenshots/overview.png "Overview")
 <br>
 
@@ -12,12 +18,7 @@ This repository implements a simple application enabling runners to generate, jo
 * Registration Page
 
 ![Alt text](screenshots/registration.png "Overview")
-
-Features included:
-* UI: A client-side user interface for user interaction
-* RESTful API: A RESTful API written in Node.js/Express for exchanging data between client and the server
-* Database: Database backend for persistent storage of data about activities and possible users
-* External API: Use of an external API for mapping and distance calculation (e.g. Google Maps)
+<br>
 
 * Route Planning
 <br>
