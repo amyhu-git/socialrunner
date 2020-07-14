@@ -4,8 +4,8 @@ This repository implements a simple application enabling runners to generate, jo
 Features included:
 * UI: A client-side user interface for user interaction
 * RESTful API: A RESTful API written in Node.js/Express for exchanging data between client and the server
-* Database: Database backend for persistent storage of data about activities and possible users
-* External API: Use of an external API for mapping and distance calculation (e.g. Google Maps)
+* Database: Database CouchDB backend for persistent storage of data about activities and possible users
+* External API: Use of an external API Google Maps for mapping and distance calculation
 
 ![Alt text](screenshots/overview.png "Overview")
 <br>
