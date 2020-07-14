@@ -1,9 +1,14 @@
 # CS5003 Practical3: Social Runner using Google Maps API
 This repository implements a simple application enabling runners to generate, join and view routes.<br>
 
+* Overview 
 ![Alt text](screenshots/overview.png "Overview")
 
+* Login Page
+
 ![Alt text](screenshots/welcome.png "Overview")
+
+* Registration Page
 
 ![Alt text](screenshots/registration.png "Overview")
 
@@ -13,9 +18,12 @@ Features included:
 * Database: Database backend for persistent storage of data about activities and possible users
 * External API: Use of an external API for mapping and distance calculation (e.g. Google Maps)
 
+* Route Planning
 ![Alt text](screenshots/GoogleMaps.png "Overview")
 
 ![Alt text](screenshots/Information.png "Overview")
+
+* Route Display
 
 ![Alt text](screenshots/Example.png "Overview")
 
@@ -46,6 +54,8 @@ https://www.mozilla.org/de/firefox/new/
 
 After installing CouchDB, Node.js and Chrome, use "npm install <package name>" to install packages needed.<br>
 
+
+* Logout Page
 
 ![Alt text](screenshots/logout.png "Overview")
 
