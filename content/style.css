@@ -1,0 +1,92 @@
+.jumbotron {
+    background-image: url("https://source.unsplash.com/h2ZTEoRz0wY/8192 × 5462");
+    background-size: cover;
+    color: white;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+h1 span {
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+p span {
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+h6 {
+    font-family: sans-serif
+}
+
+#all-routes {
+    list-style-type: none;
+}
+
+
+/* #startpoint_button,
+#endpoint_button,
+#waypoint_button,
+#explore-search {
+    float: right
+} */
+
+#public_msg,
+#routeTitle,
+#explore-routes {
+    text-align: center;
+}
+
+#public_msg {
+    margin-bottom: 5px;
+}
+
+.routes {
+    text-align: center;
+}
+
+.routes>li {
+    background: #f8f9fa!important;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* .routes>li>p {
+    font-weight: bold;
+} */
+
+
+/* #navbar {
+    width: 100%;
+} */
+
+
+/* #directions-info {
+    text-align: center;
+    display: inline-block;
+    width: 60%;
+    margin-left: 50px;
+} */
+
+#login,
+#registration {
+    width: 50%;
+    margin: auto;
+}
+
+#map {
+    height: 100%;
+    width: 63%;
+    float: left
+}
+
+#right-panel {
+    float: right;
+    width: 34%;
+    height: 100%;
+}
+
+#description {
+    margin: auto;
+}

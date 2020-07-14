@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--CSS file-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Google Maps-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHk8PK4PitIg7i32mA42rQu6paqGiz3pU&callback=initMap&libraries=places" type="text/javascript"></script>
+
+    <title>Social Runner</title>
+</head>
+
+<body>
+    <!--Cover-->
+    <div class="jumbotron">
+        <h1 class="display-4"><span> LET'S GET RUNNING .</span></h1>
+        <hr class="my-4">
+        <!-- <p class="lead" id="sub-title"><span>Let's join your fellow social runners and explore the best routes in the world!</span></p>
+            <hr class="my-4">
+            <p><span>Let's get running!</span></p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Sign up</a>
+            </p> -->
+    </div>
+
+    <!--Navigation bar-->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <a class="navbar-brand" href="#home">🕊️</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#socialRunnerContent" aria-controls="socialRunnerContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="socialRunnerContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#profile">Profile</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Routes
+                  </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#explore-routes">Search</a>
+                            <a class="dropdown-item" href="#route-info">Create</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#route-list">All Routes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--Public message before login-->
+    <section id="public">
+        <br>
+        <div class="lead" id="public_msg"></div>
+    </section>
+
+    <!--Login/Registration-->
+    <div id="sign-up">
+        <form id="login">
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pass" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-secondary" id="login_button">Login</button>
+            <button class="btn btn-secondary" id="register_button">Register</button>
+        </form>
+        <form id="registration">
+            <p class="lead"> Please fill in your details: </p>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" id="firstname" placeholder="First name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="lastname" placeholder="Last name">
+                </div>
+            </div>
+            <br>
+            <label>Set your username:</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="newUsername" placeholder="Username">
+                <small id="uniqueName" class="form-text text-muted">Tip: Your username should be as unique as you are :)</small>
+            </div>
+            <label>Set your password:</label>
+            <div class="form-group">
+                <input type="password" class="form-control" id="newPass" placeholder="Password">
+            </div>
+            <label>Level of Experience:</label>
+            <select class="form-control" id="experience">
+                <option value="Beginner"> Beginner </option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            <br>
+            <button type="submit" class="btn btn-secondary" id="submit_register">Submit</button>
+            <button class="btn btn-light" id="cancel_button">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Home Tab-->
+    <section id="private">
+        <!-- <div class="container" id="home">
+                <h2 class="display-4" id="routeTitle">Welcome to Social Runner</h2>
+                <p id="private_msg"></p>
+                <button id="logout_button" class="btn btn-outline-secondary">Logout</button>
+                <br>
+            </div> -->
+
+        <!--Profile Tab-->
+        <div class="container" id="home">
+            <!-- <h2 class="display-4" id="profileTitle"></h2> -->
+            <p id="private_msg"></p>
+        </div>
+
+        <!-- Explore Tab-->
+        <div class="container" id="explore-routes">
+            <h2 class="display-4" id="routeTitle"></h2>
+            <p class="lead"> Let's explore new routes!</p>
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    <div class="input-group">
+                </form>
+                <form class="form-inline my-2 my-lg-0" id="explore-search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Routes ..." aria-label="Search" id="route-search">
+                </form>
+            </nav>
+            <br>
+            <!--Create new route tab-->
+            <div class="routes" id="all-routes">
+                <!-- <br>
+            <h2 class="display-4" id="routeTitle">All Routes</h2> -->
+            </div>
+            </div>
+            <br>
+            <div class="container" id="route-info">
+                <br>
+                <h2 class="display-4" id="createTitle">Let's create a new route!</h2>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="container" id=description>
+                            <div id="nameDiv">
+                                <b> ROUTE NAME: </b>
+                                <input class="form-control" id="routeName" type="text" placeholder="How would you like your route to be called?">
+                            </div>
+                            <div id="paceDiv">
+                                <label>Expected Pace (min per km): </label>
+                                <input class="form-control" type="time" value="00:00" id="pace-input">
+                            </div>
+                            <div id="dateDiv">
+                                <label for="datetime-local-input">Date and time: </label>
+                                <input class="form-control" type="datetime-local" id="datetime-input">
+                            </div>
+                            <div id="descriptionDiv">
+                                <label>Route description: </label>
+                                <textarea class="form-control input-lg" rows="5" id="info" type="text" placeholder=". . ."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row ">
+                    <div class="col ">
+                        <div id="map">
+                        </div>
+                        <div id="right-panel">
+                            <div class="row mb-2 ">
+                                <div class="col">
+                                </div>
+                            </div>
+                            <p>
+                                <h3>Total Distance: <span id="total"></span></h3>
+                            </p>
+                            <br>
+                            <b>Start:</b>
+                            <div id="startpointdiv">
+                                <!-- <input class="form-control" id="startpoint " type="text " placeholder="Search for places... " /> -->
+                                <input class="form-control" id="startpoint" type="text" placeholder="Search... ">
+                                <button class="btn btn-secondary btn-sm" id="startpoint-button" onClick="addStart() ">Add</button>
+                            </div>
+                            <br>
+                            <b>Meeting Points:</b>
+                            <div id="waypointsInput ">
+                                <input class="form-control" id="waypointSearch" type="text " placeholder="Search... ">
+                                <button class="btn btn-secondary btn-sm" id="waypoint-button" onClick="addWaypoints() ">Add</button>
+                                <ul id="listed-points"></ul>
+                            </div>
+                            <b>End:</b>
+                            <div id="endpointdiv">
+                                <input class="form-control" id="endpoint" type="text " placeholder="Search... ">
+                                <button class="btn btn-secondary btn-sm" id="endpoint-button" onClick="addEnd() ">Add</button>
+                            </div>
+                            <br>
+                            <button class="btn btn-outline-secondary btn-sm" type="submit" id="submitRoute">Confirm Route</button>
+                            <button class="btn btn-outline-secondary btn-sm" id="resetRout">Cancel</button>
+                            <br>
+                            <br>
+                            <div id="final-submit">
+                                <button class="btn btn-dark" type="submit" id="submitForm">CREATE NEW ROUTE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </p>
+            <div class="col">
+                <div id="directions-info"></div>
+            </div>
+    </section>
+
+
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Social runner and Map Scripts-->
+    <script src="./client.js "></script>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8U1oG1Eb3_4swTwaeOjFvAieTGjO2TjI&callback=createMap " async defer></script> -->
+</body>
+
+</html>
